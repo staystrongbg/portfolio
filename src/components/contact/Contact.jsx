@@ -127,7 +127,7 @@ const Contact = () => {
       <Cbg></Cbg>
       <Cwrapper>
         <Cleft>
-          <Ctitle>Lets discuss your project</Ctitle>
+          <Ctitle>Want to contact me?</Ctitle>
           <Cinfo>
             <CinfoItem>
               <Cicon src={Phone} alt=''></Cicon>
@@ -135,11 +135,11 @@ const Contact = () => {
             </CinfoItem>
             <CinfoItem>
               <Cicon src={Email} alt=''></Cicon>
-              dsaf@gmail.com
+              staystrongbg@gmail.com
             </CinfoItem>
             <CinfoItem>
               <Cicon src={Address} alt=''></Cicon>
-              kralja Djoke 890
+              Bulevar
             </CinfoItem>
           </Cinfo>
         </Cleft>
