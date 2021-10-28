@@ -37,7 +37,7 @@ const Products = () => {
   return (
     <Pl>
       <PlTexts>
-        <PlTitle>Create & inspire. It's Lama</PlTitle>
+        <PlTitle>Create & inspire.</PlTitle>
         <PlDesc>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
           fugit explicabo tenetur perferendis sapiente dolore recusandae
