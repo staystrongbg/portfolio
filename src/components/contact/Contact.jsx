@@ -123,7 +123,7 @@ const Contact = () => {
 
   const formRef = useRef();
   return (
-    <C>
+    <C id='contact'>
       <Cbg></Cbg>
       <Cwrapper>
         <Cleft>

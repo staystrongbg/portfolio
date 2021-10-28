@@ -3,7 +3,7 @@ import Me from '../../img/toppng.com-collection-of-free-person-drawing-pop-art-d
 import ScrollImg from '../../img/scroll.png';
 const Intro = () => {
   return (
-    <div className='i'>
+    <div className='i' id='home'>
       <div className='i-left'>
         <div className='i-left-wrapper'>
           <h2 className='i-intro'>Hello my name is</h2>

@@ -4,6 +4,7 @@ import Products from './components/products/Products';
 import Contact from './components/contact/Contact';
 import ToggleDark from './components/toggleDark/ToggleDark';
 import { useGlobalContext } from './context';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   const { isDark } = useGlobalContext();
@@ -15,6 +16,7 @@ function App() {
         color: isDark ? '#f1f1f4' : '#111',
       }}
     >
+      <Navbar />
       <ToggleDark />
       <Intro />
       <About />
