@@ -3,7 +3,7 @@ import { useContext, createContext, useState } from 'react';
 const ThemeContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const toggleMode = (e) => {
     setIsDark(!isDark);
     e.target.style.left = isDark ? '0' : '25px';
