@@ -19,7 +19,8 @@ const P = styled.div`
 `;
 const Pbrowser = styled.div`
   height: 30px;
-  background-color: rgb(243, 242, 242);
+  background-color: ${({ isDark }) =>
+    isDark ? '#111' : ' rgb(243, 242, 242)'};
   display: flex;
   align-items: center;
   position: sticky;
@@ -45,7 +46,7 @@ const Product = ({ img, link }) => {
   const { isDark } = useGlobalContext();
   return (
     <P isDark={isDark}>
-      <Pbrowser>
+      <Pbrowser isDark={isDark}>
         <Pcircle bg='F3DE2C' />
         <Pcircle bg='4BB3FD' />
         <Pcircle bg='EF233C' />

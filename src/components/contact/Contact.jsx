@@ -12,7 +12,7 @@ const C = styled.div`
 const Cbg = styled.div`
   width: 20px;
   height: 100%;
-  background-color: #59b256;
+  background-color: #1e3888;
   position: absolute;
 `;
 const Cwrapper = styled.div`
