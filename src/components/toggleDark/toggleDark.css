@@ -21,7 +21,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: crimson;
+  background-color: #000;
   position: absolute;
   transition: all ease 0.3s;
   left: 25px;
