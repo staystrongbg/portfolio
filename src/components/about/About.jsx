@@ -1,13 +1,14 @@
 import './about.css';
 import Award from '../../img/award.png';
-import Jah from '../../img/unnamed.png';
+import Me from '../../img/ninja-fight-attack-mask-svgrepo-com.svg';
+
 const About = () => {
   return (
     <div className='a' id='about'>
       <div className='a-left'>
         <div className='a-card bg'></div>
         <div className='a-card'>
-          <img src={Jah} alt='' className='a-img' />
+          <img src={Me} alt='' className='a-img' />
         </div>
       </div>
       <div className='a-right'>

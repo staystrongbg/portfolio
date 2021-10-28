@@ -1,5 +1,6 @@
 import './intro.css';
-import Me from '../../img/toppng.com-collection-of-free-person-drawing-pop-art-download-pop-art-man-1741x1784.png';
+import Ninja1 from '../../img/3276834.svg';
+
 import ScrollImg from '../../img/scroll.png';
 const Intro = () => {
   return (
@@ -26,7 +27,7 @@ const Intro = () => {
       </div>
       <div className='i-right'>
         <div className='i-bg'></div>
-        <img src={Me} className='i-img' alt='' />
+        <img src={Ninja1} className='i-img' alt='' />
       </div>
     </div>
   );
