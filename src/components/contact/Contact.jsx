@@ -88,10 +88,7 @@ const Contact = () => {
   const { isDark } = useGlobalContext();
 
   const resetForm = () => {
-    formRef.current[0].value = '';
-    formRef.current[1].value = '';
-    formRef.current[2].value = '';
-    formRef.current[3].value = '';
+    formRef.current.reset();
     setNotification(true);
     setTimeout(() => {
       setNotification(false);
@@ -103,7 +100,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formRef.current);
-    resetForm();
     emailjs
       .sendForm(
         'service_zzd160n',
@@ -119,6 +115,7 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+    resetForm();
   };
 
   const formRef = useRef();
@@ -166,13 +163,13 @@ const Contact = () => {
             <Input
               isDark={isDark}
               type='text'
-              placeholder='email'
+              placeholder='Email'
               name='user_email'
             />
             <Text
               isDark={isDark}
               rows='5'
-              placeholder='message'
+              placeholder='Message'
               name='message'
             />
             <SubmitBtn>Submit</SubmitBtn>

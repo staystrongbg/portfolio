@@ -1,6 +1,5 @@
 import './intro.css';
 import Ninja1 from '../../img/3276834.svg';
-
 import ScrollImg from '../../img/scroll.png';
 const Intro = () => {
   return (

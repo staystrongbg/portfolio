@@ -4,9 +4,9 @@ const ThemeContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(true);
-  const toggleMode = (e) => {
+  const toggleMode = (toggle) => {
     setIsDark(!isDark);
-    e.target.style.left = isDark ? '0' : '25px';
+    toggle.lastChild.style.left = isDark ? '0' : '25px';
   };
 
   return (
