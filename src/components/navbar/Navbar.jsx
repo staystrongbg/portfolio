@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../../img/unnamedd.png';
+import LogoDev from '../../img/logo_devox_x.png';
 
 import { useState } from 'react';
 import { useGlobalContext } from '../../context';
@@ -23,15 +23,17 @@ const Nav = styled.nav`
   width: 100%;
   z-index: 999;
   transition: ease all 0.5s;
-  &.scrolled {
-    background-color: #f1f1f4;
-  }
 `;
 
 const Logo = styled.img`
+  transition: ease all 0.5s;
+  border-radius: 10px;
+  background-color: ${({ isDark }) => (isDark ? '#111' : 'whitesmoke')};
+  padding: 0.5rem;
   position: absolute;
   left: 10px;
-  width: 150px;
+  top: 10px;
+  width: ${({ isScrolled }) => (isScrolled ? '40px' : '80px')};
 `;
 const Links = styled.ul`
   padding-left: 0;
@@ -64,7 +66,7 @@ const Navbar = () => {
 
   return (
     <Nav isScrolled={isScrolled} isDark={isDark}>
-      <Logo src={logo} />
+      <Logo isScrolled={isScrolled} isDark={isDark} src={LogoDev} />
       <Links>
         <Link>
           <A isDark={isDark} href='#home'>
