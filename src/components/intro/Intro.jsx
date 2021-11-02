@@ -1,7 +1,21 @@
 import './intro.css';
+import { useGlobalContext } from '../../context';
 import Ninja from '../../img/3276834.svg';
 import ScrollImg from '../../img/scroll.png';
+import styled from 'styled-components';
+
+const ITitleItem = styled.div`
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f3de2c;
+  display: flex;
+  align-items: center;
+  color: ${({ isDark }) => (isDark ? 'f3de2c' : 'crimson')};
+`;
+
 const Intro = () => {
+  const { isDark } = useGlobalContext();
   return (
     <div className='i' id='home'>
       <div className='i-left'>
@@ -10,10 +24,10 @@ const Intro = () => {
           <h2 className='i-name'>Zoran</h2>
           <div className='i-title'>
             <div className='i-title-wrapper'>
-              <div className='i-title-item'>Web Developer</div>
-              <div className='i-title-item'>UI/UX Designer</div>
-              <div className='i-title-item'>Content Creator</div>
-              <div className='i-title-item'>Graphic Designer</div>
+              <ITitleItem isDark={isDark}>Web Developer</ITitleItem>
+              <ITitleItem isDark={isDark}>UI/UX Designer</ITitleItem>
+              <ITitleItem isDark={isDark}>Content Creator</ITitleItem>
+              <ITitleItem isDark={isDark}>Graphic Designer</ITitleItem>
             </div>
           </div>
           <p className='i-desc'>
