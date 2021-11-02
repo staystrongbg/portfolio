@@ -54,6 +54,7 @@ const CinfoItem = styled.div`
   width: 70%;
   svg {
     fill: #000;
+    overflow: visible;
   }
 `;
 
