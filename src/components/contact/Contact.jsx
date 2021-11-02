@@ -1,10 +1,11 @@
 import { mobile } from '../../responsive';
 import styled from 'styled-components';
 // import { mobile, tablet } from '../../responsive';
-import Phone from '../../img/iconmonstr-phone-8.svg';
-import Email from '../../img/iconmonstr-email-1.svg';
-import git from '../../img/iconmonstr-github-1.svg';
-import linkedin from '../../img/iconmonstr-linkedin-4.svg';
+import { ReactComponent as Phone } from '../../img/iconmonstr-phone-8.svg';
+import { ReactComponent as Email } from '../../img/iconmonstr-email-1.svg';
+import { ReactComponent as Git } from '../../img/iconmonstr-github-1.svg';
+import { ReactComponent as Linkedin } from '../../img/iconmonstr-linkedin-4.svg';
+
 import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useGlobalContext } from '../../context';
@@ -49,16 +50,14 @@ const CinfoItem = styled.div`
   display: flex;
   align-items: center;
   margin: 50px 0;
+  gap: 0.75rem;
   width: 70%;
+  svg {
+    fill: #000;
+  }
 `;
-const Cicon = styled.img`
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
-`;
-const Cdesc = styled.p`
-  font-weight: 200;
-`;
+
+const Cdesc = styled.p``;
 
 const Form = styled.form`
   margin-top: 20px;
@@ -139,19 +138,19 @@ const Contact = () => {
           <Ctitle>Want to contact me?</Ctitle>
           <Cinfo>
             <CinfoItem>
-              <Cicon src={Phone} alt=''></Cicon>
+              <Phone />
               <a href='tel:+381 60 134 83 99'>+381 60 134 83 99</a>
             </CinfoItem>
             <CinfoItem>
-              <Cicon src={Email} alt=''></Cicon>
+              <Email />
               staystrongbg@gmail.com
             </CinfoItem>
             <CinfoItem>
-              <Cicon src={git} alt='git' />
+              <Git />
               /staystrongbg
             </CinfoItem>
             <CinfoItem>
-              <Cicon src={linkedin} alt='in' />
+              <Linkedin />
               in/zlazarevic/
             </CinfoItem>
           </Cinfo>
