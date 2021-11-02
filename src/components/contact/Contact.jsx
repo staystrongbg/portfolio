@@ -89,7 +89,7 @@ const Text = styled.textarea`
 const SubmitBtn = styled.button`
   border: 0;
   padding: 10px 15px;
-  background-color: #59b256;
+  background-color: #1e3888;
   font-weight: 500;
   cursor: pointer;
   color: #fff;
@@ -185,7 +185,7 @@ const Contact = () => {
               placeholder='Message'
               name='message'
             />
-            <SubmitBtn>Submit</SubmitBtn>
+            <SubmitBtn>SUBMIT</SubmitBtn>
             {notification && <Notification>Thank you!</Notification>}
           </Form>
         </Cright>
