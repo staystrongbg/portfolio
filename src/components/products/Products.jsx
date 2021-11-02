@@ -24,7 +24,7 @@ const PlDesc = styled.p`
   margin: 20px 0px;
   ${mobile({ display: 'none' })}
 `;
-const PlList = styled.div`
+const PlList = styled('div')`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -37,13 +37,8 @@ const Products = () => {
   return (
     <Pl id='work'>
       <PlTexts>
-        <PlTitle>Create & inspire.</PlTitle>
-        <PlDesc>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-          fugit explicabo tenetur perferendis sapiente dolore recusandae
-          facilis, voluptate qui repellat, sit consectetur, dolor asperiores.
-          Minus, a. Aut, numquam. Accusantium, expedita.
-        </PlDesc>
+        <PlTitle>Content i created</PlTitle>
+        <PlDesc>This is some of my work so far.</PlDesc>
       </PlTexts>
       <PlList>
         {products.map((item) => (

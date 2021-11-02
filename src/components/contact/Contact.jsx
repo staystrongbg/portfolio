@@ -1,3 +1,4 @@
+import { mobile } from '../../responsive';
 import styled from 'styled-components';
 // import { mobile, tablet } from '../../responsive';
 import Phone from '../../img/phone.png';
@@ -18,6 +19,8 @@ const Cbg = styled.div`
 const Cwrapper = styled.div`
   padding: 50px;
   display: flex;
+  background-color: ${({ isDark }) => (isDark ? '#222' : '#fff')};
+  ${mobile({ flexDirection: 'column' })}
 `;
 const Cleft = styled.div`
   flex: 1;
@@ -122,7 +125,7 @@ const Contact = () => {
   return (
     <C id='contact'>
       <Cbg></Cbg>
-      <Cwrapper>
+      <Cwrapper isDark={isDark}>
         <Cleft>
           <Ctitle>Want to contact me?</Ctitle>
           <Cinfo>
@@ -142,10 +145,7 @@ const Contact = () => {
         </Cleft>
         <Cright>
           <Cdesc>
-            <b> Lorem ipsum dolor</b> sit amet consectetur adipisicing elit.
-            Placeat iure libero amet facilis beatae! Voluptatum totam ad neque
-            quod necessitatibus similique recusandae illo quaerat, ipsum sit
-            reprehenderit et doloribus magnam!
+            Feel free to contact me! I'm looking forward to create new stuff.
           </Cdesc>
           <Form ref={formRef} onSubmit={handleSubmit}>
             <Input

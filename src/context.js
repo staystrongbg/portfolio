@@ -9,8 +9,19 @@ const AppProvider = ({ children }) => {
     toggle.lastChild.style.left = isDark ? '0' : '25px';
   };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const scrolled = () => {
+    if (window.pageYOffset > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+  window.addEventListener('scroll', scrolled);
+
   return (
-    <ThemeContext.Provider value={{ isDark, toggleMode }}>
+    <ThemeContext.Provider value={{ isDark, toggleMode, isScrolled, scrolled }}>
       {children}
     </ThemeContext.Provider>
   );

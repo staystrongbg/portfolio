@@ -1,5 +1,5 @@
 import './intro.css';
-import Ninja1 from '../../img/3276834.svg';
+import Ninja from '../../img/3276834.svg';
 import ScrollImg from '../../img/scroll.png';
 const Intro = () => {
   return (
@@ -17,16 +17,16 @@ const Intro = () => {
             </div>
           </div>
           <p className='i-desc'>
-            I design and develop services for customers of all sizes,
-            specializing in creating stylish, modern websites, web services and
-            online stores.
+            I create small scale dynamic projects and Single Page Apps (SPA) for
+            individual clients using JS, React, Styled-Components, React Router,
+            Sass
           </p>
         </div>
         <img className='i-scroll' src={ScrollImg} alt='' width='50px' />
       </div>
       <div className='i-right'>
         <div className='i-bg'></div>
-        <img src={Ninja1} className='i-img' alt='' />
+        <img src={Ninja} className='i-img' alt='' />
       </div>
     </div>
   );

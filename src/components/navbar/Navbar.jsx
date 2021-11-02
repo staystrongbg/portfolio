@@ -1,7 +1,5 @@
+import { mobile } from '../../responsive';
 import styled from 'styled-components';
-import LogoDev from '../../img/logo_devox_x.png';
-
-import { useState } from 'react';
 import { useGlobalContext } from '../../context';
 
 const Nav = styled.nav`
@@ -23,18 +21,9 @@ const Nav = styled.nav`
   width: 100%;
   z-index: 999;
   transition: ease all 0.5s;
+  ${mobile({ justifyContent: 'flex-start', paddingLeft: '15px' })}
 `;
 
-const Logo = styled.img`
-  transition: ease all 0.5s;
-  border-radius: 10px;
-  background-color: ${({ isDark }) => (isDark ? '#111' : 'whitesmoke')};
-  padding: 0.5rem;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  width: ${({ isScrolled }) => (isScrolled ? '40px' : '80px')};
-`;
 const Links = styled.ul`
   padding-left: 0;
   display: flex;
@@ -51,22 +40,10 @@ const A = styled.a`
   font-weight: bold;
 `;
 const Navbar = () => {
-  const { isDark } = useGlobalContext();
-
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const scrolled = () => {
-    if (window.pageYOffset > 0) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-  window.addEventListener('scroll', scrolled);
+  const { isDark, isScrolled } = useGlobalContext();
 
   return (
     <Nav isScrolled={isScrolled} isDark={isDark}>
-      <Logo isScrolled={isScrolled} isDark={isDark} src={LogoDev} />
       <Links>
         <Link>
           <A isDark={isDark} href='#home'>
