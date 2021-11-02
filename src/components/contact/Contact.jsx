@@ -6,6 +6,7 @@ import Email from '../../img/email.png';
 import Address from '../../img/address.png';
 import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
+import git from '../../img/iconmonstr-github-1.svg';
 import { useGlobalContext } from '../../context';
 const C = styled.div`
   height: 100vh;
@@ -140,6 +141,10 @@ const Contact = () => {
             <CinfoItem>
               <Cicon src={Address} alt=''></Cicon>
               Bulevar
+            </CinfoItem>
+            <CinfoItem>
+              <Cicon src={git} alt='git' />
+              /staystrongbg
             </CinfoItem>
           </Cinfo>
         </Cleft>
