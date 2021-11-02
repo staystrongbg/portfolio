@@ -1,12 +1,12 @@
 import { mobile } from '../../responsive';
 import styled from 'styled-components';
 // import { mobile, tablet } from '../../responsive';
-import Phone from '../../img/phone.png';
-import Email from '../../img/email.png';
-import Address from '../../img/address.png';
+import Phone from '../../img/iconmonstr-phone-8.svg';
+import Email from '../../img/iconmonstr-email-1.svg';
+import git from '../../img/iconmonstr-github-1.svg';
+import linkedin from '../../img/iconmonstr-linkedin-4.svg';
 import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-import git from '../../img/iconmonstr-github-1.svg';
 import { useGlobalContext } from '../../context';
 const C = styled.div`
   height: 100vh;
@@ -38,7 +38,13 @@ const Ctitle = styled.h1`
   font-size: 60px;
   width: 80%;
 `;
-const Cinfo = styled.div``;
+const Cinfo = styled.div`
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+`;
+
 const CinfoItem = styled.div`
   display: flex;
   align-items: center;
@@ -59,6 +65,7 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
+  outline: 0;
   background-color: ${({ isDark }) => (isDark ? '#222' : '#fff')};
   color: ${({ isDark }) => (isDark ? '#fff' : '#222')};
   width: 50%;
@@ -70,6 +77,7 @@ const Input = styled.input`
 `;
 
 const Text = styled.textarea`
+  outline: 0;
   background-color: ${({ isDark }) => (isDark ? '#222' : '#fff')};
   color: ${({ isDark }) => (isDark ? '#fff' : '#222')};
   width: 100%;
@@ -132,19 +140,19 @@ const Contact = () => {
           <Cinfo>
             <CinfoItem>
               <Cicon src={Phone} alt=''></Cicon>
-              +1 8787 897 08
+              <a href='tel:+381 60 134 83 99'>+381 60 134 83 99</a>
             </CinfoItem>
             <CinfoItem>
               <Cicon src={Email} alt=''></Cicon>
               staystrongbg@gmail.com
             </CinfoItem>
             <CinfoItem>
-              <Cicon src={Address} alt=''></Cicon>
-              Bulevar
-            </CinfoItem>
-            <CinfoItem>
               <Cicon src={git} alt='git' />
               /staystrongbg
+            </CinfoItem>
+            <CinfoItem>
+              <Cicon src={linkedin} alt='in' />
+              in/zlazarevic/
             </CinfoItem>
           </Cinfo>
         </Cleft>
