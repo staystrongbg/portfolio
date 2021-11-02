@@ -8,10 +8,10 @@ const ITitleItem = styled.div`
   height: 50px;
   font-size: 30px;
   font-weight: bold;
-  color: #f3de2c;
+  color: crimson;
   display: flex;
   align-items: center;
-  color: ${({ isDark }) => (isDark ? 'f3de2c' : 'crimson')};
+  color: ${({ isDark }) => isDark && '#f3de2c'};
 `;
 
 const Intro = () => {
