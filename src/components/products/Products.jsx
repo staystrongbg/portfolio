@@ -2,9 +2,16 @@ import Product from '../product/Product';
 import styled from 'styled-components';
 import { mobile, tablet } from '../../responsive';
 import { products } from '../../data'; //named import ne mora da bude default export
+import { Cbg } from '../contact/Contact';
+
+const PCbg = styled(Cbg)`
+  background-color: #111;
+  top: 0;
+`;
 
 const Pl = styled.div`
   padding: 50px 100px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +43,7 @@ const PlList = styled('div')`
 const Products = () => {
   return (
     <Pl id='work'>
+      <PCbg />
       <PlTexts>
         <PlTitle>Content i created</PlTitle>
         <PlDesc>This is some of my work so far.</PlDesc>

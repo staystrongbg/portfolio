@@ -1,28 +1,32 @@
-import { mobile } from '../../responsive';
 import styled from 'styled-components';
-// import { mobile, tablet } from '../../responsive';
 import { ReactComponent as Phone } from '../../img/iconmonstr-phone-8.svg';
 import { ReactComponent as Email } from '../../img/iconmonstr-email-1.svg';
 import { ReactComponent as Git } from '../../img/iconmonstr-github-1.svg';
 import { ReactComponent as Linkedin } from '../../img/iconmonstr-linkedin-4.svg';
+import { mobile, mt } from '../../responsive';
 
 import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useGlobalContext } from '../../context';
+
 const C = styled.div`
   height: 100vh;
 `;
-const Cbg = styled.div`
+export const Cbg = styled.div`
   width: 20px;
   height: 100%;
   background-color: #1e3888;
   position: absolute;
+  left: 0;
+  ${mobile({ display: 'none' })}
+  ${mt({ display: 'none' })}
 `;
 const Cwrapper = styled.div`
   padding: 50px;
   display: flex;
   background-color: ${({ isDark }) => (isDark ? '#222' : '#fff')};
-  ${mobile({ flexDirection: 'column' })}
+  ${mobile({ flexDirection: 'column', padding: '10px' })}
+  ${mt({ flexDirection: 'column' })};
 `;
 const Cleft = styled.div`
   flex: 1;
@@ -52,9 +56,11 @@ const CinfoItem = styled.div`
   margin: 50px 0;
   gap: 0.75rem;
   width: 70%;
+  ${mobile({ width: '100%' })}
+
   svg {
     fill: #000;
-    overflow: visible;
+    /* overflow: visible; */
   }
 `;
 
@@ -62,6 +68,9 @@ const Cdesc = styled.p``;
 
 const Form = styled.form`
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;
 
 const Input = styled.input`
@@ -80,7 +89,7 @@ const Text = styled.textarea`
   outline: 0;
   background-color: ${({ isDark }) => (isDark ? '#222' : '#fff')};
   color: ${({ isDark }) => (isDark ? '#fff' : '#222')};
-  width: 100%;
+  width: 80%;
   margin: 10px 0;
   font-size: 14px;
   padding-left: 10px;
@@ -93,6 +102,7 @@ const SubmitBtn = styled.button`
   font-weight: 500;
   cursor: pointer;
   color: #fff;
+  width: calc(80% + 18px);
 `;
 const Notification = styled.span``;
 

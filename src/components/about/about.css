@@ -101,3 +101,20 @@
     padding: 20px;
   }
 }
+@media screen and (max-width: 768px) {
+  .a {
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    gap: 100px;
+  }
+
+  .a-left {
+    width: 100%;
+  }
+  .a-card {
+    height: 45vh;
+    width: 80%;
+  }
+}

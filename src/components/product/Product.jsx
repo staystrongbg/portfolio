@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mobile, tablet } from '../../responsive';
+import { mobile, tablet, mt } from '../../responsive';
 import { useGlobalContext } from '../../context';
 
 const P = styled.div`
@@ -15,7 +15,9 @@ const P = styled.div`
   &:hover {
     transform: scale(1.15) rotate(-2deg);
   }
-  ${mobile({ height: '20vh', width: '40%' })}
+  ${mobile({ height: '20vh', width: '40%' })};
+  ${tablet({ height: '30vh', width: '40%' })};
+  ${mt({ height: '20vh', width: '40%' })};
 `;
 const Pbrowser = styled.div`
   height: 30px;
@@ -25,6 +27,7 @@ const Pbrowser = styled.div`
   align-items: center;
   position: sticky;
   z-index: 2;
+  ${tablet({ zIndex: 0 })};
 `;
 const Pcircle = styled.div`
   width: 8px;
