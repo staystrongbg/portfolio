@@ -2,8 +2,6 @@ import { mobile } from '../../responsive';
 import styled from 'styled-components';
 import { useGlobalContext } from '../../context';
 import { Cbg } from '../contact/Contact';
-import { useRef } from 'react';
-import { useEffect } from 'react';
 
 const Nav = styled.nav`
   background-color: ${({ isScrolled, isDark }) =>
