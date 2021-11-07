@@ -2,6 +2,8 @@ import { mobile } from '../../responsive';
 import styled from 'styled-components';
 import { useGlobalContext } from '../../context';
 import { Cbg } from '../contact/Contact';
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 const Nav = styled.nav`
   background-color: ${({ isScrolled, isDark }) =>
@@ -40,43 +42,68 @@ const Links = styled.ul`
 
 const Link = styled.li`
   list-style: none;
+  padding: 5px 10px;
 `;
 
 const A = styled.a`
+  background-color: ${({ isActive }) => isActive && '#000'};
   text-decoration: none;
   color: ${({ isDark }) => (isDark ? '#888' : '#222')};
   font-weight: bold;
 `;
 const Navbar = () => {
-  const { isDark, isScrolled } = useGlobalContext();
+  const { isDark, isScrolled, isActive, setIsActive } = useGlobalContext();
+
+  const liList = [
+    { id: 1, href: 'Home' },
+    { id: 2, href: 'About' },
+    { id: 3, href: 'Work' },
+    { id: 4, href: 'Contact' },
+  ];
 
   return (
     <Nav isScrolled={isScrolled} isDark={isDark}>
       <Cbg />
       <Links>
-        <Link>
-          <A isDark={isDark} href='#home'>
-            Home
-          </A>
-        </Link>
-        <Link>
-          <A isDark={isDark} href='#about'>
-            About
-          </A>
-        </Link>
-        <Link>
-          <A isDark={isDark} href='#work'>
-            My Work
-          </A>
-        </Link>
-        <Link>
-          <A isDark={isDark} href='#contact'>
-            Contact
-          </A>
-        </Link>
+        {liList.map((link) => (
+          <Link
+            key={link.id}
+            onClick={() => setIsActive(link.id)}
+            style={{ background: `${isActive === link.id ? '#000' : ''}` }}
+          >
+            <A
+              style={{ color: `${isActive === link.id ? '#fff' : ''}` }}
+              isDark={isDark}
+              href={`#${link.href.toLowerCase()}`}
+            >
+              {link.href}
+            </A>
+          </Link>
+        ))}
       </Links>
     </Nav>
   );
 };
 
 export default Navbar;
+
+// <Link>
+//   <A isDark={isDark} href='#home'>
+//     Home
+//   </A>
+// </Link>
+// <Link>
+//   <A isDark={isDark} href='#about'>
+//     About
+//   </A>
+// </Link>
+// <Link>
+//   <A isDark={isDark} href='#work'>
+//     My Work
+//   </A>
+// </Link>
+// <Link>
+//   <A isDark={isDark} href='#contact'>
+//     Contact
+//   </A>
+// </Link>
