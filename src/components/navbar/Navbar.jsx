@@ -36,11 +36,14 @@ const Links = styled.ul`
   padding-left: 0;
   display: flex;
   gap: 20px;
+  height: 100%;
 `;
 
 const Link = styled.li`
   list-style: none;
   padding: 5px 10px;
+  display: flex;
+  align-items: center;
 `;
 
 const A = styled.a`
