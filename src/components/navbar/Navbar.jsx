@@ -15,11 +15,18 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  box-shadow: ${({ isScrolled }) =>
+    isScrolled &&
+    '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0)'};
+  -webkit-box-shadow: ${({ isScrolled }) =>
+    isScrolled &&
+    '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0)'};
   gap: 50px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+
   z-index: 999;
   transition: ease all 0.5s;
   ${mobile({ justifyContent: 'flex-start', paddingLeft: '15px' })}
