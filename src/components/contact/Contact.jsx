@@ -102,7 +102,7 @@ const SubmitBtn = styled.button`
   font-weight: 500;
   cursor: pointer;
   color: #fff;
-  width: calc(80% + 18px);
+  width: 80%;
 `;
 const Notification = styled.span``;
 
