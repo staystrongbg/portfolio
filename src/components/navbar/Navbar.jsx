@@ -86,24 +86,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// <Link>
-//   <A isDark={isDark} href='#home'>
-//     Home
-//   </A>
-// </Link>
-// <Link>
-//   <A isDark={isDark} href='#about'>
-//     About
-//   </A>
-// </Link>
-// <Link>
-//   <A isDark={isDark} href='#work'>
-//     My Work
-//   </A>
-// </Link>
-// <Link>
-//   <A isDark={isDark} href='#contact'>
-//     Contact
-//   </A>
-// </Link>
