@@ -40,7 +40,8 @@ const Cright = styled.div`
 `;
 
 const Ctitle = styled.h1`
-  font-size: 60px;
+  font-size: 50px;
+  font-weight: 600;
   width: 80%;
 `;
 const Cinfo = styled.div`
