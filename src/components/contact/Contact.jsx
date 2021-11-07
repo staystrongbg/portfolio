@@ -141,6 +141,13 @@ const Contact = () => {
   };
 
   const formRef = useRef();
+
+  const inputs = [
+    { placeholder: 'Name', name: 'user_name' },
+    { placeholder: 'Subject', name: 'user_subject' },
+    { placeholder: 'Email', name: 'user_email' },
+  ];
+
   return (
     <C id='contact'>
       <Cbg></Cbg>
@@ -183,24 +190,15 @@ const Contact = () => {
             Feel free to contact me! I'm looking forward to create new stuff.
           </Cdesc>
           <Form ref={formRef} onSubmit={handleSubmit}>
-            <Input
-              isDark={isDark}
-              type='text'
-              placeholder='Name'
-              name='user_name'
-            />
-            <Input
-              isDark={isDark}
-              type='text'
-              placeholder='Subject'
-              name='user_subject'
-            />
-            <Input
-              isDark={isDark}
-              type='text'
-              placeholder='Email'
-              name='user_email'
-            />
+            {inputs.map((input, index) => (
+              <Input
+                key={index}
+                isDark={isDark}
+                type='text'
+                placeholder={input.placeholder}
+                name={input.name}
+              />
+            ))}
             <Text
               isDark={isDark}
               rows='5'
