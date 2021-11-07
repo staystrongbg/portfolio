@@ -1,6 +1,7 @@
 import { mobile } from '../../responsive';
 import styled from 'styled-components';
 import { useGlobalContext } from '../../context';
+import { Cbg } from '../contact/Contact';
 
 const Nav = styled.nav`
   background-color: ${({ isScrolled, isDark }) =>
@@ -14,7 +15,6 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border-left: 20px solid #000;
   gap: 50px;
   position: fixed;
   top: 0;
@@ -45,6 +45,7 @@ const Navbar = () => {
 
   return (
     <Nav isScrolled={isScrolled} isDark={isDark}>
+      <Cbg />
       <Links>
         <Link>
           <A isDark={isDark} href='#home'>
