@@ -44,7 +44,6 @@ const Link = styled.li`
 `;
 
 const A = styled.a`
-  background-color: ${({ isActive }) => isActive && '#000'};
   text-decoration: none;
   color: ${({ isDark }) => (isDark ? '#888' : '#222')};
   font-weight: bold;
@@ -66,10 +65,10 @@ const Navbar = () => {
         {liList.map((link) => (
           <Link
             key={link.id}
-            onClick={() => setIsActive(link.id)}
             style={{ background: `${isActive === link.id ? '#000' : ''}` }}
           >
             <A
+              onClick={() => setIsActive(link.id)}
               style={{ color: `${isActive === link.id ? '#fff' : ''}` }}
               isDark={isDark}
               href={`#${link.href.toLowerCase()}`}
