@@ -29,12 +29,14 @@
 }
 
 .i-name {
-  font-size: 60px;
+  font-size: 80px;
 }
 
 .i-title {
   height: 50px;
   overflow: hidden;
+  justify-content: center;
+  width: max-content;
 }
 
 .i-title-wrapper {

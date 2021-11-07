@@ -154,15 +154,27 @@ const Contact = () => {
             </CinfoItem>
             <CinfoItem>
               <Email />
-              staystrongbg@gmail.com
+              <a href='mailto:staystrongbg@gmail.com'>staystrongbg@gmail.com</a>
             </CinfoItem>
             <CinfoItem>
               <Git />
-              /staystrongbg
+              <a
+                href='https://github.com/staystrongbg'
+                target='_blank'
+                rel='noreferrer'
+              >
+                /staystrongbg
+              </a>
             </CinfoItem>
             <CinfoItem>
               <Linkedin />
-              in/zlazarevic/
+              <a
+                href='https://www.linkedin.com/in/zlazarevic/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                in/zlazarevic/
+              </a>
             </CinfoItem>
           </Cinfo>
         </Cleft>

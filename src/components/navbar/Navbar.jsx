@@ -14,6 +14,7 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  border-left: 20px solid #000;
   gap: 50px;
   position: fixed;
   top: 0;

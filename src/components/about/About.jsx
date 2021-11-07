@@ -22,7 +22,7 @@ const About = () => {
         <h1 className='a-title'>About Me</h1>
         <p className='a-desc'>
           I work hard to attain best knowledge in Modern JavaScript, ReactJS
-          aswell as Modern Design. I'm passionate about making things!
+          aswell as Modern Design. I'm passionate about creating stuff!
         </p>
       </div>
     </div>

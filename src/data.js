@@ -29,4 +29,9 @@ export const products = [
     img: './images/grid-gallery.png',
     link: 'https://super-slick-grid-gallery.surge.sh',
   },
+  {
+    id: 7,
+    img: './images/libre.png',
+    link: 'https://libre.lugons.org/',
+  },
 ];

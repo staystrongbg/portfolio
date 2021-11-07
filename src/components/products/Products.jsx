@@ -46,7 +46,10 @@ const Products = () => {
       <PCbg />
       <PlTexts>
         <PlTitle>Content i created</PlTitle>
-        <PlDesc>This is some of my work so far.</PlDesc>
+        <PlDesc>
+          Here is some of my work. On some projects i worked as a Web Developer,
+          on others, as a Graphic Designer.
+        </PlDesc>
       </PlTexts>
       <PlList>
         {products.map((item) => (
