@@ -3,6 +3,8 @@ import { ReactComponent as Phone } from '../../img/iconmonstr-phone-8.svg';
 import { ReactComponent as Email } from '../../img/iconmonstr-email-1.svg';
 import { ReactComponent as Git } from '../../img/iconmonstr-github-1.svg';
 import { ReactComponent as Linkedin } from '../../img/iconmonstr-linkedin-4.svg';
+import { ReactComponent as Hyperlink } from '../../img/iconmonstr-link-1.svg';
+
 import { mobile, mt } from '../../responsive';
 
 import { useRef, useState } from 'react';
@@ -154,7 +156,9 @@ const Contact = () => {
       <Cbg></Cbg>
       <Cwrapper isDark={isDark}>
         <Cleft>
-          <Ctitle>Want to contact me?</Ctitle>
+          <Ctitle>
+            <Hyperlink /> Want to contact me?
+          </Ctitle>
           <Cinfo>
             <CinfoItem>
               <Phone />

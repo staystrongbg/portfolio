@@ -2,7 +2,6 @@ import { mobile } from '../../responsive';
 import styled from 'styled-components';
 import { useGlobalContext } from '../../context';
 import { Cbg } from '../contact/Contact';
-
 const Nav = styled.nav`
   background-color: ${({ isScrolled, isDark }) =>
     isScrolled && !isDark
@@ -26,7 +25,6 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-
   z-index: 999;
   transition: ease all 0.5s;
   ${mobile({ justifyContent: 'flex-start', paddingLeft: '15px' })}

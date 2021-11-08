@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { mobile, tablet } from '../../responsive';
 import { products } from '../../data'; //named import ne mora da bude default export
 import { Cbg } from '../contact/Contact';
+import { ReactComponent as Hyperlink } from '../../img/iconmonstr-link-1.svg';
 
 const PCbg = styled(Cbg)`
   background-color: #111;
@@ -45,7 +46,9 @@ const Products = () => {
     <Pl id='work'>
       <PCbg />
       <PlTexts>
-        <PlTitle>Content i created</PlTitle>
+        <PlTitle>
+          <Hyperlink /> Content i created
+        </PlTitle>
         <PlDesc>
           Here is some of my work. On some projects i worked as a Web Developer,
           on others, as a Graphic Designer.

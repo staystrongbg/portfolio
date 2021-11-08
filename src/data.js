@@ -34,4 +34,14 @@ export const products = [
     img: './images/libre.png',
     link: 'https://libre.lugons.org/',
   },
+  {
+    id: 8,
+    img: './images/wttr.png',
+    link: 'http://wttr-api-zoran.surge.sh',
+  },
+  {
+    id: 9,
+    img: './images/xo.png',
+    link: 'http://x-o-bato.surge.sh',
+  },
 ];
