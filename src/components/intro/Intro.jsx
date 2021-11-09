@@ -35,8 +35,10 @@ const Intro = () => {
           <h2 className='i-name'>Zoran</h2>
           <div className='i-title'>
             <div className='i-title-wrapper'>
-              {titles.map((title) => (
-                <ITitleItem isDark={isDark}>{title}</ITitleItem>
+              {titles.map((title, index) => (
+                <ITitleItem key={index} isDark={isDark}>
+                  {title}
+                </ITitleItem>
               ))}
             </div>
           </div>
