@@ -50,7 +50,7 @@ const Products = () => {
           <Hyperlink /> Content i created
         </PlTitle>
         <PlDesc>
-          Here is some of my work. On some projects i worked as a Web Developer,
+          Here is some of my work. On some projects i worked as Web Developer,
           on others, as a Graphic Designer.
         </PlDesc>
       </PlTexts>
