@@ -2,6 +2,8 @@ import { mobile } from '../../responsive';
 import styled from 'styled-components';
 import { useGlobalContext } from '../../context';
 import { Cbg } from '../contact/Contact';
+import ToggleDark from '../toggleDark/ToggleDark';
+
 const Nav = styled.nav`
   background-color: ${({ isScrolled, isDark }) =>
     isScrolled && !isDark
@@ -86,6 +88,7 @@ const Navbar = () => {
           </Link>
         ))}
       </Links>
+      <ToggleDark />
     </Nav>
   );
 };
