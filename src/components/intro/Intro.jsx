@@ -19,6 +19,13 @@ const ICbg = styled(Cbg)`
 `;
 const Intro = () => {
   const { isDark } = useGlobalContext();
+
+  const titles = [
+    'Web Developer',
+    'UI/UX Designer',
+    'Content Createor',
+    'Graphic Designer',
+  ];
   return (
     <div className='i' id='home'>
       <ICbg></ICbg>
@@ -28,10 +35,9 @@ const Intro = () => {
           <h2 className='i-name'>Zoran</h2>
           <div className='i-title'>
             <div className='i-title-wrapper'>
-              <ITitleItem isDark={isDark}>Web Developer</ITitleItem>
-              <ITitleItem isDark={isDark}>UI/UX Designer</ITitleItem>
-              <ITitleItem isDark={isDark}>Content Creator</ITitleItem>
-              <ITitleItem isDark={isDark}>Graphic Designer</ITitleItem>
+              {titles.map((title) => (
+                <ITitleItem isDark={isDark}>{title}</ITitleItem>
+              ))}
             </div>
           </div>
           <p className='i-desc'>
