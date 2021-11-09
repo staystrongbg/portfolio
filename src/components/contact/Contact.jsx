@@ -106,8 +106,14 @@ const SubmitBtn = styled.button`
   cursor: pointer;
   color: #fff;
   width: 80%;
+  transition: ease 0.5s all;
+  &:active {
+    transform: scale(0.98);
+  }
 `;
-const Notification = styled.span``;
+const Notification = styled.span`
+  font-weight: 600;
+`;
 
 const Contact = () => {
   const { isDark } = useGlobalContext();
@@ -202,6 +208,7 @@ const Contact = () => {
                 type='text'
                 placeholder={input.placeholder}
                 name={input.name}
+                required
               />
             ))}
             <Text
@@ -209,6 +216,7 @@ const Contact = () => {
               rows='5'
               placeholder='Message'
               name='message'
+              required
             />
             <SubmitBtn>SUBMIT</SubmitBtn>
             {notification && <Notification>Thank you!</Notification>}
