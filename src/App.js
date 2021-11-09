@@ -2,7 +2,6 @@ import Intro from './components/intro/Intro';
 import About from './components/about/About';
 import Products from './components/products/Products';
 import Contact from './components/contact/Contact';
-import ToggleDark from './components/toggleDark/ToggleDark';
 import { useGlobalContext } from './context';
 import Navbar from './components/navbar/Navbar';
 
@@ -17,7 +16,6 @@ function App() {
       }}
     >
       <Navbar />
-      <ToggleDark />
       <Intro />
       <About />
       <Products />
