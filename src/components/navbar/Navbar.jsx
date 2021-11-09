@@ -28,6 +28,7 @@ const Nav = styled.nav`
   z-index: 999;
   transition: ease all 0.5s;
   ${mobile({ justifyContent: 'flex-start', paddingLeft: '15px' })}
+  animation: ${({ isScrolled }) => isScrolled && 'slideDown 1s ease'};
 `;
 
 const Links = styled.ul`
@@ -59,8 +60,14 @@ const Navbar = () => {
     { id: 4, href: 'Contact' },
   ];
 
+  let props = {
+    isDark,
+    isActive,
+    isScrolled,
+  };
+
   return (
-    <Nav isScrolled={isScrolled} isDark={isDark}>
+    <Nav {...props}>
       <Cbg />
       <Links>
         {liList.map((link) => (
@@ -71,7 +78,7 @@ const Navbar = () => {
             <A
               onClick={() => setIsActive(link.id)}
               style={{ color: `${isActive === link.id ? '#fff' : ''}` }}
-              isDark={isDark}
+              {...props}
               href={`#${link.href.toLowerCase()}`}
             >
               {link.href}
