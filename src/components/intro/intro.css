@@ -77,25 +77,6 @@
   }
 }
 
-.i-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-}
-
-.i-bg {
-  /* clip-path: polygon(100% 0%, 100% 51%, 100% 100%, 25% 100%, 0% 50%, 25% 0%); */
-  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.3), #151515); */
-  /* z-index: 2; */
-  /* background-color: #96031a; */
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 @media screen and (max-width: 480px) {
   .i {
     flex-direction: column;
