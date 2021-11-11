@@ -8,6 +8,8 @@ import Navbar from './components/navbar/Navbar';
 function App() {
   const { isDark } = useGlobalContext();
 
+  document.body.style = `background: ${isDark} ? 'radial-gradient(at left top, rgb(23, 32, 18) 0%, rgb(43, 9, 107) 100%)'
+          : '#f1f1f4'`;
   return (
     <div
       style={{

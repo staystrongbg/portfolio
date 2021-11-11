@@ -11,9 +11,7 @@ import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useGlobalContext } from '../../context';
 
-const C = styled.div`
-  height: 100vh;
-`;
+const C = styled.div``;
 export const Cbg = styled.div`
   width: 20px;
   height: 100%;
