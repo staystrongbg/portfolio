@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mobile, tablet, mt } from '../../responsive';
+import { tablet, mt } from '../../responsive';
 import { useGlobalContext } from '../../context';
 
 const P = styled.div`
