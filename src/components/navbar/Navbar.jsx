@@ -9,7 +9,7 @@ const Nav = styled.nav`
     isScrolled && !isDark
       ? 'white'
       : isScrolled && isDark
-      ? '#221D23'
+      ? 'rgb(12, 13, 18)'
       : 'transparent'};
   height: 50px;
   width: 100%;
@@ -38,6 +38,7 @@ const Links = styled.ul`
   display: flex;
   gap: 20px;
   height: 100%;
+  ${mobile({ gap: '10px' })}
 `;
 
 const Link = styled.li`
