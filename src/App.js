@@ -11,7 +11,9 @@ function App() {
   return (
     <div
       style={{
-        backgroundColor: isDark ? '#222' : '#fff',
+        background: isDark
+          ? 'radial-gradient(at left top, rgb(23, 32, 18) 0%, rgb(43, 9, 107) 100%)'
+          : '#f1f1f4',
         color: isDark ? '#f1f1f4' : '#111',
       }}
     >

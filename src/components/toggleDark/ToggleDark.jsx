@@ -31,20 +31,17 @@ const TButton = styled.button`
   background-color: #1e3888;
   position: absolute;
   transition: all ease 0.3s;
-  left: 25px;
+  left: ${({ isDark }) => (isDark ? '25px' : '0px')}}};
 `;
 
 const ToggleDark = () => {
   const toggleEle = useRef();
-  const { toggleMode } = useGlobalContext();
+  const { toggleMode, isDark } = useGlobalContext();
   return (
-    <ToggleWrapper
-      ref={toggleEle}
-      onClick={() => toggleMode(toggleEle.current)}
-    >
+    <ToggleWrapper ref={toggleEle} onClick={toggleMode}>
       <Sun />
       <Moon />
-      <TButton></TButton>
+      <TButton isDark={isDark}></TButton>
     </ToggleWrapper>
   );
 };

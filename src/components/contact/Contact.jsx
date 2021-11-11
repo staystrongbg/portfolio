@@ -26,7 +26,7 @@ export const Cbg = styled.div`
 const Cwrapper = styled.div`
   padding: 50px;
   display: flex;
-  background-color: ${({ isDark }) => (isDark ? '#222' : '#fff')};
+  background-color: transparent;
   ${mobile({ flexDirection: 'column', padding: '10px' })}
   ${mt({ flexDirection: 'column' })};
 `;
@@ -51,6 +51,10 @@ const Cinfo = styled.div`
     text-decoration: none;
     color: inherit;
   }
+  svg {
+    fill: ${({ isDark }) => (isDark ? '#f3de2c' : '#000')};
+    /* overflow: visible; */
+  }
 `;
 
 const CinfoItem = styled.div`
@@ -60,11 +64,6 @@ const CinfoItem = styled.div`
   gap: 0.75rem;
   width: 70%;
   ${mobile({ width: '100%' })}
-
-  svg {
-    fill: #000;
-    /* overflow: visible; */
-  }
 `;
 
 const Cdesc = styled.p``;
@@ -78,7 +77,7 @@ const Form = styled.form`
 
 const Input = styled.input`
   outline: 0;
-  background-color: ${({ isDark }) => (isDark ? '#222' : '#fff')};
+  background-color: transparent;
   color: ${({ isDark }) => (isDark ? '#fff' : '#222')};
   width: 50%;
   height: 50px;
@@ -90,7 +89,7 @@ const Input = styled.input`
 
 const Text = styled.textarea`
   outline: 0;
-  background-color: ${({ isDark }) => (isDark ? '#222' : '#fff')};
+  background-color: transparent;
   color: ${({ isDark }) => (isDark ? '#fff' : '#222')};
   width: 80%;
   margin: 10px 0;
@@ -165,7 +164,7 @@ const Contact = () => {
           <Ctitle>
             <Hyperlink /> Want to contact me?
           </Ctitle>
-          <Cinfo>
+          <Cinfo isDark={isDark}>
             <CinfoItem>
               <Phone />
               <a href='tel:+381 60 134 83 99'>+381 60 134 83 99</a>

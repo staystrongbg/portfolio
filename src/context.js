@@ -8,7 +8,6 @@ const AppProvider = ({ children }) => {
 
   const toggleMode = (toggle) => {
     setIsDark(!isDark);
-    toggle.lastChild.style.left = isDark ? '0' : '25px';
   };
 
   const [isScrolled, setIsScrolled] = useState(false);
