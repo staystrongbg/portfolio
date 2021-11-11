@@ -34,7 +34,7 @@ const Intro = () => {
   const titles = [
     'Web Developer',
     'UI/UX Designer',
-    'Content Createor',
+    'Content Creator',
     'Graphic Designer',
   ];
 
