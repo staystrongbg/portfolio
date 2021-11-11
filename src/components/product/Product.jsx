@@ -15,9 +15,8 @@ const P = styled.div`
   &:hover {
     transform: scale(1.15) rotate(-2deg);
   }
-  ${mobile({ height: '30vh', width: '80%' })};
   ${tablet({ height: '30vh', width: '40%' })};
-  ${mt({ height: '20vh', width: '40%' })};
+  ${mt({ height: '30vh', width: '100%' })};
 `;
 const Pbrowser = styled.div`
   height: 30px;
