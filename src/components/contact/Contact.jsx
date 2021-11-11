@@ -26,8 +26,8 @@ const Cwrapper = styled.div`
   display: flex;
   background-color: transparent;
   height: 100vh;
-  ${mobile({ flexDirection: 'column', padding: '10px' })}
-  ${mt({ flexDirection: 'column', padding: '20px' })};
+  ${mobile({ flexDirection: 'column', padding: '0px', height: '100%' })}
+  ${mt({ flexDirection: 'column', padding: '10px' })};
 `;
 const Cleft = styled.div`
   flex: 1;
