@@ -9,7 +9,7 @@ const Nav = styled.nav`
     isScrolled && !isDark
       ? 'white'
       : isScrolled && isDark
-      ? 'rgb(12, 13, 18)'
+      ? 'rgba(12, 13, 18,0.9)'
       : 'transparent'};
   height: 50px;
   width: 100%;
