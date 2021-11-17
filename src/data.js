@@ -36,7 +36,7 @@ export const products = [
   },
   {
     id: 8,
-    img: './images/Screenshot from 2021-10-28 16-15-39.png',
+    img: './images/Screenshot from 2021-10-28 16-15-40.png',
     link: 'https://sala-kameleon.vercel.app//',
   },
 ];
