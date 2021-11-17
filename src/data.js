@@ -34,4 +34,9 @@ export const products = [
     img: './images/libre.png',
     link: 'https://libre.lugons.org/',
   },
+  {
+    id: 8,
+    img: './images/Screenshot from 2021-10-28 16-15-39.png',
+    link: 'https://sala-kameleon.vercel.app//',
+  },
 ];
