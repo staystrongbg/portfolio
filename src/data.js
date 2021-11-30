@@ -32,11 +32,15 @@ export const products = [
   {
     id: 7,
     img: './images/libre.png',
-    link: 'https://libre.lugons.org/',
+    link: 'https://libre.lugons.org',
   },
   {
     id: 8,
     img: './images/Screenshot from 2021-10-28 16-15-40.png',
-    link: 'https://sala-kameleon.vercel.app//',
+    link: 'https://sala-kameleon.vercel.app',
+  },  {
+    id: 9,
+    img: './images/ciklogen.png',
+    link: 'https://ciklogen-next.vercel.app',
   },
 ];
