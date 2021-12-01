@@ -40,7 +40,7 @@ export const products = [
     link: 'https://sala-kameleon.vercel.app',
   },  {
     id: 9,
-    img: './images/ciklogen.png',
+    img: './images/ciklogen-next.png',
     link: 'https://ciklogen-next.vercel.app',
   },
 ];
