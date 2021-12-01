@@ -1,7 +1,7 @@
 import './intro.css';
 import { useGlobalContext } from '../../context';
 import { ReactComponent as Ninja } from '../../img/3276834.svg';
-import ScrollImg from '../../img/scroll.png';
+import { ReactComponent as Scroll } from '../../img/C.svg';
 import styled from 'styled-components';
 import { Cbg } from '../contact/Contact';
 
@@ -11,7 +11,6 @@ const ITitleItem = styled.div`
   font-weight: bold;
   display: flex;
   align-items: center;
-  color: #f5ced6;
   color: ${({ isDark }) => (isDark ? '#f3de2c' : 'crimson')};
 `;
 const ICbg = styled(Cbg)`
@@ -43,7 +42,7 @@ const Intro = () => {
       <ICbg></ICbg>
       <div className='i-left'>
         <div className='i-left-wrapper'>
-          <h2 className='i-intro'>Hello, my name is</h2>
+          <h2 className='i-intro'>Hello my name is</h2>
           <h2 className='i-name'>Zoran</h2>
           <div className='i-title'>
             <div className='i-title-wrapper'>
@@ -59,7 +58,10 @@ const Intro = () => {
             individual clients using JS/React/Sass
           </p>
         </div>
-        <img className='i-scroll' src={ScrollImg} alt='' width='50px' />
+        <Scroll
+          style={{ fill: isDark ? '#f5ced6' : '#333' }}
+          className='i-scroll'
+        />
       </div>
       <div className='i-right'>
         <INinja isDark={isDark} color='#333' />

@@ -5,23 +5,20 @@ import { Cbg } from '../contact/Contact';
 import ToggleDark from '../toggleDark/ToggleDark';
 
 const Nav = styled.nav`
-  background-color: ${({ isScrolled, isDark }) =>
+  background-color: ${({ isScrolled, isDark, theme }) =>
     isScrolled && !isDark
-      ? 'rgba(215,215,205,0.9   )'
+      ? theme.colors.sucmurasta
       : isScrolled && isDark
-      ? 'rgba(12, 13, 18,0.9)'
+      ? theme.colors.sucmurastaDark
       : 'transparent'};
   height: 50px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: ${({ isScrolled }) =>
-    isScrolled &&
-    '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0)'};
-  -webkit-box-shadow: ${({ isScrolled }) =>
-    isScrolled &&
-    '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0)'};
+  box-shadow: ${({ isScrolled, theme }) => isScrolled && theme.colors.shadow};
+  -webkit-box-shadow: ${({ isScrolled, theme }) =>
+    isScrolled && theme.colors.shadow};
   gap: 50px;
   position: fixed;
   top: 0;
@@ -30,7 +27,7 @@ const Nav = styled.nav`
   z-index: 999;
   transition: ease all 0.5s;
   ${mobile({ justifyContent: 'flex-start', paddingLeft: '15px' })}
-  animation: ${({ isScrolled }) => isScrolled && 'slideDown 1s ease'};
+  animation: ${({ isScrolled }) => isScrolled && 'slideDown 0.3s ease'};
 `;
 
 const Links = styled.ul`
@@ -50,7 +47,8 @@ const Link = styled.li`
 
 const A = styled.a`
   text-decoration: none;
-  color: ${({ isDark }) => (isDark ? '#888' : '#222')};
+  color: ${({ isDark, theme }) =>
+    isDark ? theme.colors.gray : theme.colors.darkGray};
   font-weight: bold;
 `;
 const Navbar = () => {

@@ -26,7 +26,11 @@ const Cwrapper = styled.div`
   display: flex;
   background-color: transparent;
   height: 100vh;
-  ${mobile({ flexDirection: 'column', padding: '0px', height: '100%' })}
+  ${mobile({
+    flexDirection: 'column',
+    padding: '0px',
+    height: '100%',
+  })}
   ${mt({ flexDirection: 'column', padding: '10px' })};
 `;
 const Cleft = styled.div`
@@ -51,7 +55,7 @@ const Cinfo = styled.div`
     color: inherit;
   }
   svg {
-    fill: ${({ isDark }) => (isDark ? '#f3de2c' : '#000')};
+    fill: ${({ isDark }) => (isDark ? '#7797fa' : '#000')};
     /* overflow: visible; */
   }
 `;

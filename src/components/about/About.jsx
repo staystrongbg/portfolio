@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { ReactComponent as Hyperlink } from '../../img/iconmonstr-link-1.svg';
 
 const ACbg = styled(Cbg)`
-  background-color: #f3de2c;
+  background-color: ${({ theme }) => theme.colors.yellowColor};
 `;
 
 const About = () => {

@@ -6,7 +6,7 @@ import { Cbg } from '../contact/Contact';
 import { ReactComponent as Hyperlink } from '../../img/iconmonstr-link-1.svg';
 
 const PCbg = styled(Cbg)`
-  background-color: #111;
+  background-color: ${({ theme }) => theme.colors.darkGray};
   top: 0;
 `;
 
