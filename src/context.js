@@ -6,7 +6,7 @@ const AppProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(true);
   const [isActive, setIsActive] = useState(1);
 
-  const toggleMode = (toggle) => {
+  const toggleMode = () => {
     setIsDark(!isDark);
   };
 
