@@ -1,7 +1,7 @@
 import './intro.css';
 import { useGlobalContext } from '../../context';
-import { ReactComponent as Ninja } from '../../img/3276834.svg';
 import { ReactComponent as Scroll } from '../../img/C.svg';
+import Code from '../../img/code.png';
 import styled from 'styled-components';
 import { Cbg } from '../contact/Contact';
 
@@ -15,16 +15,6 @@ const ITitleItem = styled.div`
 `;
 const ICbg = styled(Cbg)`
   background-color: crimson;
-`;
-
-const INinja = styled(Ninja)`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* position: absolute; */
-  g {
-    fill: ${({ isDark, color }) => (!isDark ? color : '#000')};
-  }
 `;
 
 const Intro = () => {
@@ -64,7 +54,7 @@ const Intro = () => {
         />
       </div>
       <div className='i-right'>
-        <INinja isDark={isDark} color='#333' />
+        <img src={Code} alt='' />
       </div>
     </div>
   );

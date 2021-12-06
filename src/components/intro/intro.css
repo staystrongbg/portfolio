@@ -14,6 +14,15 @@
   flex: 1;
   position: relative;
 }
+.i-right img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* height: 60vh; */
+  width: 100%;
+  /* border-radius: 40px; */
+  right: 0;
+}
 
 .i-left-wrapper {
   padding: 50px;
@@ -106,5 +115,14 @@
   }
   .i-img {
     object-fit: contain;
+  }
+  .i-right img {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .i-right img {
+    height: 30%;
   }
 }
