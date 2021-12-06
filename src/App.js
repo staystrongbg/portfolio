@@ -6,6 +6,7 @@ import { GlobalStyles } from './components/GlobalStyles';
 import { useGlobalContext } from './context';
 import Navbar from './components/navbar/Navbar';
 import { ThemeProvider } from 'styled-components';
+import Footer from './components/ footer/footer';
 
 function App() {
   const { isDark } = useGlobalContext();
@@ -13,6 +14,7 @@ function App() {
   const theme = {
     colors: {
       bg: 'radial-gradient(at left top, rgb(13, 32, 18) 0%, rgb(0, 9, 107) 100%)',
+      bg2: '#222',
       colorLight: '#f1f1f4',
       colorDark: '#111',
       yellowColor: '#f3de2c',
@@ -28,7 +30,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div
         style={{
-          background: isDark ? theme.colors.bg : theme.colors.colorLight,
+          background: isDark ? theme.colors.bg2 : theme.colors.colorLight,
           color: isDark ? theme.colors.colorLight : theme.colors.colorDark,
         }}
       >
@@ -39,6 +41,7 @@ function App() {
         <Products />
         <Contact />
       </div>
+      <Footer />
     </ThemeProvider>
   );
 }

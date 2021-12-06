@@ -35,7 +35,7 @@ const Links = styled.ul`
   display: flex;
   gap: 20px;
   height: 100%;
-  ${mobile({ gap: '10px' })}
+  ${mobile({ gap: '0px' })}
 `;
 
 const Link = styled.li`

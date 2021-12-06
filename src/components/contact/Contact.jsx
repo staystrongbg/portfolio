@@ -132,7 +132,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formRef.current);
+    // console.log(formRef.current);
+    // console.log(formRef.current[0].value);
     emailjs
       .sendForm(
         'service_zzd160n',
@@ -157,6 +158,7 @@ const Contact = () => {
     { placeholder: 'Name', name: 'user_name' },
     { placeholder: 'Subject', name: 'user_subject' },
     { placeholder: 'Email', name: 'user_email' },
+    { placeholder: 'lastname', name: 'user_lastnam' },
   ];
 
   return (
