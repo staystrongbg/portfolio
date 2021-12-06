@@ -39,7 +39,7 @@ const Cleft = styled.div`
 const Cright = styled.div`
   flex: 1;
   display: flex;
-  align-items: center;
+//   align-items: center;
   justify-content: center;
   flex-direction: column;
 `;
