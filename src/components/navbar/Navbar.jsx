@@ -9,7 +9,7 @@ const Nav = styled.nav`
     isScrolled && !isDark
       ? theme.colors.sucmurasta
       : isScrolled && isDark
-      ? theme.colors.sucmurastaDark
+      ? theme.colors.bg2
       : 'transparent'};
   height: 50px;
   width: 100%;
@@ -43,6 +43,20 @@ const Link = styled.li`
   padding: 5px 10px;
   display: flex;
   align-items: center;
+  border-bottom: 4px solid transparent;
+  position: relative;
+`;
+
+const ArrowUp = styled.div`
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 const A = styled.a`
@@ -74,16 +88,27 @@ const Navbar = () => {
         {liList.map((link) => (
           <Link
             key={link.id}
-            style={{ background: `${isActive === link.id ? '#000' : ''}` }}
+            style={
+              {
+                // borderBottom: `${isActive === link.id ? '4px solid #000' : ''}`,
+              }
+            }
           >
             <A
               onClick={() => setIsActive(link.id)}
-              style={{ color: `${isActive === link.id ? '#fff' : ''}` }}
+              style={{
+                color: `${isDark ? '#fff' : '#222'}`,
+              }}
               {...props}
               href={`#${link.href.toLowerCase()}`}
             >
               {link.href}
             </A>
+            <ArrowUp
+              style={{
+                visibility: `${isActive === link.id ? 'visible' : 'hidden'}`,
+              }}
+            />
           </Link>
         ))}
       </Links>
