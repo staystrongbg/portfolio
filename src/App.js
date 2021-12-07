@@ -14,7 +14,7 @@ function App() {
   const theme = {
     colors: {
       bg: 'radial-gradient(at left top, rgb(13, 32, 18) 0%, rgb(0, 9, 107) 100%)',
-      bg2: 'rgba(20,20,20,0.9',
+      bg2: 'rgba(34,34,34,0.9)',
       colorLight: '#f1f1f4',
       colorDark: '#111',
       yellowColor: '#f3de2c',
