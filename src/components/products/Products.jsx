@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { mobile, tablet } from '../../responsive';
 import { products } from '../../data'; //named import ne mora da bude default export
 import { Cbg } from '../contact/Contact';
-import { ReactComponent as Hyperlink } from '../../img/iconmonstr-link-1.svg';
+import { ReactComponent as Hyper } from '../../img/iconmonstr-link-1.svg';
+import { useGlobalContext } from '../../context';
 
 const PCbg = styled(Cbg)`
   background-color: ${({ theme }) => theme.colors.darkGray};
@@ -24,10 +25,22 @@ const PlTexts = styled.div`
   width: 65%;
   ${mobile({ width: '100%' })}
 `;
+const Hyperlink = styled(Hyper)`
+  visibility: hidden;
+`;
 const PlTitle = styled.h1`
   font-size: 50px;
   font-weight: 600;
+  a {
+    font-size: 50px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  &:hover ${Hyperlink} {
+    visibility: visible;
+  }
 `;
+
 const PlDesc = styled.p`
   margin: 20px 0px;
   ${mobile({ display: 'none' })}
@@ -42,12 +55,15 @@ const PlList = styled('div')`
 `;
 
 const Products = () => {
+  const { isDark } = useGlobalContext();
   return (
     <Pl id='work'>
       <PCbg />
       <PlTexts>
         <PlTitle>
-          <Hyperlink /> Content i created
+          <a href='#work' style={{ color: isDark ? '#f1f1f4' : '#111' }}>
+            <Hyperlink /> Content i created
+          </a>
         </PlTitle>
         <PlDesc>
           Here is some of my work. On some projects i worked as Web Developer,

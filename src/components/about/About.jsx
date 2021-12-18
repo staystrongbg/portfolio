@@ -2,13 +2,31 @@ import './about.css';
 import Ninja1 from '../../img/20200404_153512.jpg';
 import { Cbg } from '../contact/Contact';
 import styled from 'styled-components';
-import { ReactComponent as Hyperlink } from '../../img/iconmonstr-link-1.svg';
+import { ReactComponent as Hyper } from '../../img/iconmonstr-link-1.svg';
+import { useGlobalContext } from '../../context';
 
 const ACbg = styled(Cbg)`
   background-color: ${({ theme }) => theme.colors.yellowColor};
 `;
 
+const Hyperlink = styled(Hyper)`
+  visibility: hidden;
+`;
+const ATitle = styled.h1`
+  font-weight: 600;
+  font-size: 50px;
+  a {
+    font-weight: 600;
+    font-size: 50px;
+    text-decoration: none;
+  }
+  &:hover ${Hyperlink} {
+    visibility: visible;
+  }
+`;
+
 const About = () => {
+  const { isDark } = useGlobalContext();
   document.title = 'devox-portfolio';
   return (
     <div className='a' id='about'>
@@ -20,9 +38,11 @@ const About = () => {
         </div>
       </div>
       <div className='a-right'>
-        <h1 className='a-title'>
-          <Hyperlink /> About Me
-        </h1>
+        <ATitle>
+          <a href='#about' style={{ color: isDark ? '#f1f1f1' : '#111' }}>
+            <Hyperlink /> About Me
+          </a>
+        </ATitle>
         <p className='a-desc'>
           I work hard to attain best knowledge in Modern JavaScript, ReactJS
           aswell as Modern Design. I'm passionate about creating stuff!

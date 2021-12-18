@@ -7,7 +7,7 @@ import ToggleDark from '../toggleDark/ToggleDark';
 const Nav = styled.nav`
   background-color: ${({ isScrolled, isDark, theme }) =>
     isScrolled && !isDark
-      ? theme.colors.sucmurasta
+      ? theme.colors.colorLight
       : isScrolled && isDark
       ? theme.colors.bg2
       : 'transparent'};

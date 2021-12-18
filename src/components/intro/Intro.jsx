@@ -2,6 +2,7 @@ import './intro.css';
 import { useGlobalContext } from '../../context';
 import { ReactComponent as Scroll } from '../../img/C.svg';
 import Code from '../../img/code.png';
+import CodeLight from '../../img/code-light.png';
 import styled from 'styled-components';
 import { Cbg } from '../contact/Contact';
 
@@ -54,7 +55,11 @@ const Intro = () => {
         />
       </div>
       <div className='i-right'>
-        <img src={Code} alt='' />
+        <img
+          src={isDark ? Code : CodeLight}
+          alt=''
+          style={{ border: !isDark && '2px solid lightgray' }}
+        />
       </div>
     </div>
   );

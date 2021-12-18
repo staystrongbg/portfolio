@@ -3,10 +3,8 @@ import { ReactComponent as Phone } from '../../img/iconmonstr-phone-8.svg';
 import { ReactComponent as Email } from '../../img/iconmonstr-email-1.svg';
 import { ReactComponent as Git } from '../../img/iconmonstr-github-1.svg';
 import { ReactComponent as Linkedin } from '../../img/iconmonstr-linkedin-4.svg';
-import { ReactComponent as Hyperlink } from '../../img/iconmonstr-link-1.svg';
-
+import { ReactComponent as Hyper } from '../../img/iconmonstr-link-1.svg';
 import { mobile, mt } from '../../responsive';
-
 import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useGlobalContext } from '../../context';
@@ -39,15 +37,26 @@ const Cleft = styled.div`
 const Cright = styled.div`
   flex: 1;
   display: flex;
-//   align-items: center;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
 `;
 
+const Hyperlink = styled(Hyper)`
+  visibility: hidden;
+`;
 const Ctitle = styled.h1`
   font-size: 50px;
   font-weight: 600;
   width: 80%;
+  a {
+    font-size: 50px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  &:hover ${Hyperlink} {
+    visibility: visible;
+  }
 `;
 const Cinfo = styled.div`
   a {
@@ -167,7 +176,9 @@ const Contact = () => {
       <Cwrapper isDark={isDark}>
         <Cleft>
           <Ctitle>
-            <Hyperlink /> Want to contact me?
+            <a href='#contact' style={{ color: isDark ? '#f1f1f4' : '#111' }}>
+              <Hyperlink /> Want to contact me?
+            </a>
           </Ctitle>
           <Cinfo isDark={isDark}>
             <CinfoItem>
