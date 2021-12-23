@@ -33,11 +33,11 @@ const Cwrapper = styled.div`
 `;
 const Cleft = styled.div`
   flex: 1;
+  text-align: left;
 `;
 const Cright = styled.div`
   flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
 `;
@@ -176,7 +176,10 @@ const Contact = () => {
       <Cwrapper isDark={isDark}>
         <Cleft>
           <Ctitle>
-            <a href='#contact' style={{ color: isDark ? '#f1f1f4' : '#111' }}>
+            <a
+              href='#contact'
+              style={{ color: isDark ? '#f1f1f4' : '#111', textAlign: 'left' }}
+            >
               <Hyperlink /> Want to contact me?
             </a>
           </Ctitle>
