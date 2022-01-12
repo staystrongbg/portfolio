@@ -65,10 +65,7 @@ const Products = () => {
             <Hyperlink /> Content i created
           </a>
         </PlTitle>
-        <PlDesc>
-          Here is some of my work. On some projects i worked as Web Developer,
-          on others, as a Graphic Designer.
-        </PlDesc>
+        <PlDesc>Here is some of my work.</PlDesc>
       </PlTexts>
       <PlList>
         {products.map((item) => (
