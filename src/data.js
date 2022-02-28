@@ -14,7 +14,7 @@ export const products = [
   {
     id: 7,
     img: './images/recepti.png',
-    link: 'https://recepti-la-zola.netlify.app',
+    link: 'https://devox-recepti.netlify.app',
   },
   {
     id: 8,
