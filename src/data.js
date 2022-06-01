@@ -18,8 +18,8 @@ export const products = [
   },
   {
     id: 8,
-    img: './images/Screenshot from 2021-10-28 16-15-40.png',
-    link: 'https://sala-kameleon.vercel.app',
+    img: './images/kameleon.png',
+    link: 'https://sala-ketering-kameleon.com',
   },
   {
     id: 9,
@@ -28,6 +28,11 @@ export const products = [
   },
   {
     id: 1,
+    img: './images/ask23.png',
+    link: 'https://ask23.rs/',
+  },
+  {
+    id: 2,
     img: './images/devox-notes.png',
     link: 'https://devox-notes.netlify.app/',
   },
