@@ -1,75 +1,53 @@
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Single from './pages/Single';
-import Write from './pages/Write';
+import Intro from './components/intro/Intro';
+import About from './components/about/About';
+import Products from './components/products/Products';
+import Contact from './components/contact/Contact';
+import { GlobalStyles } from './components/GlobalStyles';
+import { useGlobalContext } from './context';
+import Navbar from './components/navbar/Navbar';
+import { ThemeProvider } from 'styled-components';
+import Footer from './components/ footer/footer';
 
-import './style.scss';
-
-const Layout = () => {
-  return (
-    <>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </>
-  );
-};
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      // layout only for  these 3 children
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/post/:id',
-        element: <Single />,
-      },
-      {
-        path: '/write',
-        element: <Write />,
-      },
-    ],
-  },
-  // {
-  //not these
-  //   path: '/register',
-  //   element: <Register />,
-  // },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-]);
+import 'swiper/swiper-bundle.min.css';
 
 function App() {
+  const { isDark } = useGlobalContext();
+
+  const theme = {
+    colors: {
+      bg: 'linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))',
+      bg2: '#26292c',
+      bg3: '#000428',
+      colorLight: '#f1f1f4',
+      colorDark: '#111',
+      yellowColor: '#f3de2c',
+      shadow: '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0)',
+      sucmurasta: 'rgba(215,215,205,0.9  )',
+      sucmurastaDark: 'rgba(12, 13, 18,0.9)',
+      sucmurastaDarkOp: 'rgba(12, 13, 18,0.6)',
+      whiteOp: 'rgba(245,250,255,0.75)',
+      gray: '#888',
+      darkGray: '#222',
+    },
+  };
+
   return (
-    <div className='app blue-gradient-2'>
+    <ThemeProvider theme={theme}>
       <div
-        className='gradient-3'
         style={{
-          width: '350px',
-          height: '350px',
-          top: '250px',
-          right: 0,
-          borderRadius: '50%',
-          filter: 'blur(550px)',
-          zIndex: '0',
-          position: 'absolute',
+          background: isDark ? theme.colors.bg : theme.colors.colorLight,
+          color: isDark ? theme.colors.colorLight : theme.colors.colorDark,
         }}
-      />
-      <div className='container'>
-        <RouterProvider router={router} />
+      >
+        <GlobalStyles />
+        <Navbar />
+        <Intro />
+        <About />
+        <Products />
+        <Contact />
       </div>
-    </div>
+      <Footer />
+    </ThemeProvider>
   );
 }
 
