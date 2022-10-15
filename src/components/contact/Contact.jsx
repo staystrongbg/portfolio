@@ -4,7 +4,7 @@ import { ReactComponent as Email } from '../../img/iconmonstr-email-1.svg';
 import { ReactComponent as Git } from '../../img/iconmonstr-github-1.svg';
 import { ReactComponent as Linkedin } from '../../img/iconmonstr-linkedin-4.svg';
 import { ReactComponent as Hyper } from '../../img/iconmonstr-link-1.svg';
-import { mobile, mt } from '../../responsive';
+import { mobile, mt, laoptop } from '../../responsive';
 import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useGlobalContext } from '../../context';
@@ -19,12 +19,15 @@ export const Cbg = styled.div`
   ${mobile({ display: 'none' })}
   ${mt({ display: 'none' })}
 `;
+
 const Cwrapper = styled.div`
   padding: 50px;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   background-color: transparent;
   height: 100vh;
-  ${mobile({
+  ${laoptop({
     flexDirection: 'column',
     padding: '0px',
     height: '100%',
@@ -32,14 +35,19 @@ const Cwrapper = styled.div`
   ${mt({ flexDirection: 'column', padding: '10px' })};
 `;
 const Cleft = styled.div`
-  flex: 1;
   text-align: left;
+  white-space: nowrap;
 `;
 const Cright = styled.div`
-  flex: 1;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: ${({ theme, isDark }) =>
+    isDark ? theme.colors.sucmurastaDarkOp : theme.colors.whiteOp};
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid ${({ isDark }) => (isDark ? '#333' : '#f3f2f2')};
+  box-shadow: ${({ theme }) => theme.colors.shadow};
 `;
 
 const Hyperlink = styled(Hyper)`
@@ -84,26 +92,27 @@ const Form = styled.form`
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 600px;
+  justify-content: center;
 `;
 
 const Input = styled.input`
   outline: 0;
   background-color: transparent;
-  color: ${({ isDark }) => (isDark ? '#fff' : '#222')};
-  width: 50%;
+  color: ${({ isDark }) => (isDark ? '#dadada' : '#222')};
   height: 50px;
   border: none;
-  border-bottom: 1px solid ${({ isDark }) => (isDark ? '#fff' : '#222')};
+  border-bottom: 1px solid ${({ isDark }) => (isDark ? '#888' : '#222')};
   margin: 10px 0;
   padding-left: 10px;
 `;
 
 const Text = styled.textarea`
   outline: 0;
+  border: 1px solid ${({ isDark }) => (isDark ? '#888' : '#222')};
+
   background-color: transparent;
-  color: ${({ isDark }) => (isDark ? '#fff' : '#222')};
-  width: 80%;
+  color: ${({ isDark }) => (isDark ? '#dadada' : '#222')};
   margin: 10px 0;
   font-size: 14px;
   padding-left: 10px;
@@ -116,12 +125,12 @@ const SubmitBtn = styled.button`
   font-weight: 500;
   cursor: pointer;
   color: #fff;
-  width: 80%;
   transition: ease 0.5s all;
   &:active {
     transform: scale(0.98);
   }
 `;
+
 const Notification = styled.span`
   font-weight: 600;
 `;
@@ -141,8 +150,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(formRef.current);
-    // console.log(formRef.current[0].value);
+
     emailjs
       .sendForm(
         'service_zzd160n',
@@ -167,12 +175,11 @@ const Contact = () => {
     { placeholder: 'Name', name: 'user_name' },
     { placeholder: 'Subject', name: 'user_subject' },
     { placeholder: 'Email', name: 'user_email' },
-    { placeholder: 'lastname', name: 'user_lastnam' },
+    { placeholder: 'Lastname', name: 'user_lastnam' },
   ];
 
   return (
     <C id='contact'>
-      <Cbg></Cbg>
       <Cwrapper isDark={isDark}>
         <Cleft>
           <Ctitle>
@@ -214,7 +221,7 @@ const Contact = () => {
             </CinfoItem>
           </Cinfo>
         </Cleft>
-        <Cright>
+        <Cright isDark={isDark}>
           <Cdesc>
             Feel free to contact me! I'm looking forward to create new stuff.
           </Cdesc>

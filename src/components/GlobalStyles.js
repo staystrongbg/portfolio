@@ -16,6 +16,7 @@ html {
       }
       a {
         font-size: 1.1rem;
+        text-decoration: none
       }
 
       @keyframes slideDown {

@@ -3,7 +3,6 @@ import { useGlobalContext } from '../../context';
 import { ReactComponent as Scroll } from '../../img/C.svg';
 import Code from '../../img/darrrk.png';
 import styled from 'styled-components';
-import { Cbg } from '../contact/Contact';
 
 const ITitleItem = styled.div`
   height: 50px;
@@ -13,26 +12,17 @@ const ITitleItem = styled.div`
   align-items: center;
   color: ${({ isDark }) => (isDark ? '#f3de2c' : 'crimson')};
 `;
-const ICbg = styled(Cbg)`
-  background-color: crimson;
-`;
 
 const Intro = () => {
   const { isDark } = useGlobalContext();
 
-  const titles = [
-    'Web Developer',
-    'UI/UX Designer',
-    'Content Creator',
-    'Graphic Designer',
-  ];
+  const titles = ['Web Developer', 'UI/UX Designer', 'Content Creator'];
 
   return (
     <div className='i' id='home'>
-      <ICbg></ICbg>
       <div className='i-left'>
         <div className='i-left-wrapper'>
-          <h2 className='i-intro'>Hello my name is</h2>
+          <h2 className='i-intro'>Welcome! I am</h2>
           <h2 className='i-name'>Zoran</h2>
           <div className='i-title'>
             <div className='i-title-wrapper'>
@@ -44,8 +34,9 @@ const Intro = () => {
             </div>
           </div>
           <p className='i-desc'>
-            I create small scale dynamic projects and Single Page Apps (SPA) for
-            individual clients using JS/React/Sass
+            <b>FullStack developer</b> based in Belgrade/Serbia <br /> I develop
+            fast dynamic websites and Single Page Aplications using latest Web
+            Technologies
           </p>
         </div>
         <Scroll

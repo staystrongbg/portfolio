@@ -1,7 +1,6 @@
 import { mobile } from '../../responsive';
 import styled from 'styled-components';
 import { useGlobalContext } from '../../context';
-import { Cbg } from '../contact/Contact';
 import ToggleDark from '../toggleDark/ToggleDark';
 
 const Nav = styled.nav`
@@ -9,7 +8,7 @@ const Nav = styled.nav`
     isScrolled && !isDark
       ? theme.colors.colorLight
       : isScrolled && isDark
-      ? theme.colors.bg2
+      ? theme.colors.sucmurastaDark
       : 'transparent'};
   height: 50px;
   width: 100%;
@@ -73,6 +72,7 @@ const Navbar = () => {
     { id: 2, href: 'About' },
     { id: 3, href: 'Work' },
     { id: 4, href: 'Contact' },
+    { id: 5, href: 'Blog' },
   ];
 
   let props = {
@@ -83,24 +83,20 @@ const Navbar = () => {
 
   return (
     <Nav {...props}>
-      <Cbg />
       <Links>
         {liList.map((link) => (
-          <Link
-            key={link.id}
-            style={
-              {
-                // borderBottom: `${isActive === link.id ? '4px solid #000' : ''}`,
-              }
-            }
-          >
+          <Link key={link.id}>
             <A
               onClick={() => setIsActive(link.id)}
               style={{
                 color: `${isDark ? '#fff' : '#222'}`,
               }}
               {...props}
-              href={`#${link.href.toLowerCase()}`}
+              href={
+                link.href !== 'Blog'
+                  ? `#${link.href.toLowerCase()}`
+                  : 'https://devox-blog.netlify.app/'
+              }
             >
               {link.href}
             </A>

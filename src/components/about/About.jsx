@@ -1,13 +1,8 @@
 import './about.css';
 import Ninja1 from '../../img/20200404_153512.jpg';
-import { Cbg } from '../contact/Contact';
 import styled from 'styled-components';
 import { ReactComponent as Hyper } from '../../img/iconmonstr-link-1.svg';
 import { useGlobalContext } from '../../context';
-
-const ACbg = styled(Cbg)`
-  background-color: ${({ theme }) => theme.colors.yellowColor};
-`;
 
 const Hyperlink = styled(Hyper)`
   visibility: hidden;
@@ -30,10 +25,9 @@ const About = () => {
   document.title = 'devox-portfolio';
   return (
     <div className='a' id='about'>
-      <ACbg />
       <div className='a-left'>
-        <div className='a-card bg'></div>
         <div className='a-card'>
+          <div className='a-card bg' />
           <img src={Ninja1} alt='' className='a-img' />
         </div>
       </div>

@@ -8,19 +8,24 @@ import Navbar from './components/navbar/Navbar';
 import { ThemeProvider } from 'styled-components';
 import Footer from './components/ footer/footer';
 
+import 'swiper/swiper-bundle.min.css';
+
 function App() {
   const { isDark } = useGlobalContext();
 
   const theme = {
     colors: {
-      bg: 'radial-gradient(at left top, rgb(13, 32, 18) 0%, rgb(0, 9, 107) 100%)',
+      bg: 'linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))',
       bg2: '#26292c',
+      bg3: '#000428',
       colorLight: '#f1f1f4',
       colorDark: '#111',
       yellowColor: '#f3de2c',
       shadow: '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0)',
       sucmurasta: 'rgba(215,215,205,0.9  )',
       sucmurastaDark: 'rgba(12, 13, 18,0.9)',
+      sucmurastaDarkOp: 'rgba(12, 13, 18,0.6)',
+      whiteOp: 'rgba(245,250,255,0.75)',
       gray: '#888',
       darkGray: '#222',
     },
@@ -30,7 +35,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div
         style={{
-          background: isDark ? theme.colors.bg2 : theme.colors.colorLight,
+          background: isDark ? theme.colors.bg : theme.colors.colorLight,
           color: isDark ? theme.colors.colorLight : theme.colors.colorDark,
         }}
       >
