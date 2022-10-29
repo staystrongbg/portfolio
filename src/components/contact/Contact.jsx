@@ -36,7 +36,7 @@ const Cwrapper = styled.div`
 `;
 const Cleft = styled.div`
   text-align: left;
-  white-space: nowrap;
+
 `;
 const Cright = styled.div`
   display: flex;
