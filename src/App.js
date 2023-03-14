@@ -10,6 +10,8 @@ import Footer from "./components/ footer/footer";
 
 import "swiper/swiper-bundle.min.css";
 
+import 'swiper/swiper-bundle.min.css';
+
 function App() {
   const { isDark } = useGlobalContext();
 
