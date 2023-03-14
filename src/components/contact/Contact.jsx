@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import styled from "styled-components";
 import { ReactComponent as Phone } from "../../img/iconmonstr-phone-8.svg";
 import { ReactComponent as Email } from "../../img/iconmonstr-email-1.svg";
@@ -9,18 +8,6 @@ import { mobile, mt, laoptop } from "../../responsive";
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { useGlobalContext } from "../../context";
-=======
-import styled from 'styled-components';
-import { ReactComponent as Phone } from '../../img/iconmonstr-phone-8.svg';
-import { ReactComponent as Email } from '../../img/iconmonstr-email-1.svg';
-import { ReactComponent as Git } from '../../img/iconmonstr-github-1.svg';
-import { ReactComponent as Linkedin } from '../../img/iconmonstr-linkedin-4.svg';
-import { ReactComponent as Hyper } from '../../img/iconmonstr-link-1.svg';
-import { mobile, mt, laoptop } from '../../responsive';
-import { useRef, useState } from 'react';
-import emailjs from 'emailjs-com';
-import { useGlobalContext } from '../../context';
->>>>>>> 642c8fb7cd9219384e0cd9bd8d52671c877d033f
 
 const C = styled.div``;
 export const Cbg = styled.div`
@@ -41,15 +28,9 @@ const Cwrapper = styled.div`
   background-color: transparent;
   height: 100vh;
   ${laoptop({
-<<<<<<< HEAD
     flexDirection: "column",
     padding: "0px",
     height: "100%",
-=======
-    flexDirection: 'column',
-    padding: '0px',
-    height: '100%',
->>>>>>> 642c8fb7cd9219384e0cd9bd8d52671c877d033f
   })}
   ${mt({ flexDirection: "column", padding: "10px" })};
 `;
@@ -65,11 +46,7 @@ const Cright = styled.div`
     isDark ? theme.colors.sucmurastaDarkOp : theme.colors.whiteOp};
   padding: 10px;
   border-radius: 10px;
-<<<<<<< HEAD
   border: 2px solid ${({ isDark }) => (isDark ? "#333" : "#f3f2f2")};
-=======
-  border: 2px solid ${({ isDark }) => (isDark ? '#333' : '#f3f2f2')};
->>>>>>> 642c8fb7cd9219384e0cd9bd8d52671c877d033f
   box-shadow: ${({ theme }) => theme.colors.shadow};
 `;
 
