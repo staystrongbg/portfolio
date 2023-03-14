@@ -36,7 +36,6 @@ const Cwrapper = styled.div`
 `;
 const Cleft = styled.div`
   text-align: left;
-
 `;
 const Cright = styled.div`
   display: flex;
@@ -172,7 +171,6 @@ const Contact = () => {
   const formRef = useRef();
 
   const inputs = [
-<<<<<<< HEAD
     { placeholder: "Name", name: "user_name" },
     { placeholder: "Subject", name: "user_subject" },
     { placeholder: "Email", name: "user_email" },
@@ -181,16 +179,6 @@ const Contact = () => {
 
   return (
     <C id="contact">
-=======
-    { placeholder: 'Name', name: 'user_name' },
-    { placeholder: 'Subject', name: 'user_subject' },
-    { placeholder: 'Email', name: 'user_email' },
-    { placeholder: 'Lastname', name: 'user_lastnam' },
-  ];
-
-  return (
-    <C id='contact'>
->>>>>>> 642c8fb7cd9219384e0cd9bd8d52671c877d033f
       <Cwrapper isDark={isDark}>
         <Cleft>
           <Ctitle>
