@@ -1,9 +1,8 @@
-import './intro.css';
-import { useGlobalContext } from '../../context';
-import { ReactComponent as Scroll } from '../../img/C.svg';
-import Code from '../../img/darrrk.png';
-import styled from 'styled-components';
-import { Cbg } from '../contact/Contact';
+import "./intro.css";
+import { useGlobalContext } from "../../context";
+import { ReactComponent as Scroll } from "../../img/C.svg";
+import Code from "../../img/darrrk.png";
+import styled from "styled-components";
 
 const ITitleItem = styled.div`
   height: 50px;
@@ -11,31 +10,22 @@ const ITitleItem = styled.div`
   font-weight: bold;
   display: flex;
   align-items: center;
-  color: ${({ isDark }) => (isDark ? '#f3de2c' : 'crimson')};
-`;
-const ICbg = styled(Cbg)`
-  background-color: crimson;
+  color: ${({ isDark }) => (isDark ? "#f3de2c" : "crimson")};
 `;
 
 const Intro = () => {
   const { isDark } = useGlobalContext();
 
-  const titles = [
-    'Web Developer',
-    'UI/UX Designer',
-    'Content Creator',
-    'Graphic Designer',
-  ];
+  const titles = ["Javascript Developer"];
 
   return (
-    <div className='i' id='home'>
-      <ICbg></ICbg>
-      <div className='i-left'>
-        <div className='i-left-wrapper'>
-          <h2 className='i-intro'>Hello my name is</h2>
-          <h2 className='i-name'>Zoran</h2>
-          <div className='i-title'>
-            <div className='i-title-wrapper'>
+    <div className="i" id="home">
+      <div className="i-left">
+        <div className="i-left-wrapper">
+          <h2 className="i-intro">Welcome! I am</h2>
+          <h2 className="i-name">Zoran</h2>
+          <div className="i-title">
+            <div className="i-title-wrapper">
               {titles.map((title, index) => (
                 <ITitleItem key={index} isDark={isDark}>
                   {title}
@@ -43,21 +33,22 @@ const Intro = () => {
               ))}
             </div>
           </div>
-          <p className='i-desc'>
-            I create small scale dynamic projects and Single Page Apps (SPA) for
-            individual clients using JS/React/Sass
+          <p className="i-desc">
+            <b>FullStack developer</b> based in Belgrade/Serbia <br /> I develop
+            fast dynamic websites and Single Page Aplications using latest Web
+            Technologies
           </p>
         </div>
         <Scroll
-          style={{ fill: isDark ? '#f5ced6' : '#333' }}
-          className='i-scroll'
+          style={{ fill: isDark ? "#f5ced6" : "#333" }}
+          className="i-scroll"
         />
       </div>
-      <div className='i-right'>
+      <div className="i-right">
         <img
           src={Code}
-          alt=''
-          style={{ border: !isDark && '2px solid lightgray' }}
+          alt=""
+          style={{ border: !isDark && "2px solid lightgray" }}
         />
       </div>
     </div>

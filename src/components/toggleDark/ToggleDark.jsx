@@ -1,10 +1,10 @@
-import { ReactComponent as Sun } from '../../img/iconmonstr-weather-1.svg';
-import { ReactComponent as Moon } from '../../img/iconmonstr-weather-114.svg';
-import { useGlobalContext } from '../../context';
-import { useRef } from 'react';
-import styled from 'styled-components';
+import { ReactComponent as Sun } from "../../img/iconmonstr-weather-1.svg";
+import { ReactComponent as Moon } from "../../img/iconmonstr-weather-114.svg";
+import { useGlobalContext } from "../../context";
+import { useRef } from "react";
+import styled from "styled-components";
 
-const ToggleWrapper = styled('div')`
+const ToggleWrapper = styled("div")`
   width: 50px;
   height: 25px;
   border-radius: 20px;
@@ -28,10 +28,10 @@ const TButton = styled.button`
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #1e3888;
+  background-color: #1e884e;
   position: absolute;
   transition: all ease 0.3s;
-  left: ${({ isDark }) => (isDark ? '25px' : '0px')}}};
+  left: ${({ isDark }) => (isDark ? "25px" : "0px")}}};
 `;
 
 const ToggleDark = () => {

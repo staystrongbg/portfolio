@@ -1,22 +1,19 @@
 import styled from 'styled-components';
-import { tablet, mt } from '../../responsive';
+import { tablet } from '../../responsive';
 import { useGlobalContext } from '../../context';
 
 const P = styled.div`
-  width: 30%;
-  height: 40vh;
-  margin: 20px 10px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
   border: 2px solid ${({ isDark }) => (isDark ? '#333' : '#f3f2f2')};
-  border-radius: 10px 10px 0px 0px;
-  overflow: hidden;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   box-shadow: ${({ isDark }) =>
     isDark ? ' 4px 4px 10px #111' : '4px 4px 10px #888'};
+
   &:hover {
-    transform: scale(1.15) rotate(-2deg);
+    transform: scale(1.1) rotate(-2deg);
   }
-  ${tablet({ height: '30vh', width: '40%' })};
-  ${mt({ height: '30vh', width: '100%' })};
 `;
 const Pbrowser = styled.div`
   height: 30px;
@@ -47,16 +44,16 @@ const Img = styled.img`
 const Product = ({ img, link }) => {
   const { isDark } = useGlobalContext();
   return (
-    <P isDark={isDark}>
-      <Pbrowser isDark={isDark}>
-        <Pcircle bg='F3DE2C' />
-        <Pcircle bg='4BB3FD' />
-        <Pcircle bg='EF233C' />
-      </Pbrowser>
-      <Link href={link} target='_blank' rel='noreferrer'>
+    <Link href={link} target='_blank' rel='noreferrer'>
+      <P isDark={isDark}>
+        <Pbrowser isDark={isDark}>
+          <Pcircle bg='F3DE2C' />
+          <Pcircle bg='4BB3FD' />
+          <Pcircle bg='EF233C' />
+        </Pbrowser>
         <Img src={img} />
-      </Link>
-    </P>
+      </P>
+    </Link>
   );
 };
 

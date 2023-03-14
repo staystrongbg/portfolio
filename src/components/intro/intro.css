@@ -13,16 +13,31 @@
 .i-right {
   flex: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .i-right img {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  /* height: 60vh; */
+  position: relative;
   width: 100%;
-  /* border-radius: 40px; */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   border: 2px solid #333;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.i-right::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 100, 0.18);
+  border-radius: 50%;
+  filter: blur(40px);
   right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
 .i-left-wrapper {
@@ -51,20 +66,7 @@
 
 .i-title-wrapper {
   height: 100%;
-  animation: move 6s ease-in-out infinite alternate;
-}
-
-@keyframes move {
-  33% {
-    transform: translateY(-50px);
-  }
-  66% {
-    transform: translateY(-100px);
-  }
-
-  100% {
-    transform: translateY(-150px);
-  }
+  /* animation: move 6s ease-in-out infinite alternate; */
 }
 
 .i-scroll {
@@ -74,6 +76,15 @@
   position: absolute;
   bottom: 20px;
   animation: bounce 3s alternate infinite;
+}
+
+@keyframes move {
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
 }
 
 @keyframes bounce {
@@ -89,10 +100,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .i {
-    flex-direction: column;
-  }
-
   .i-left-wrapper {
     padding: 10px;
     align-items: center;

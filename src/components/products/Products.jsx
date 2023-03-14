@@ -2,23 +2,25 @@ import Product from '../product/Product';
 import styled from 'styled-components';
 import { mobile, tablet } from '../../responsive';
 import { products } from '../../data'; //named import ne mora da bude default export
-import { Cbg } from '../contact/Contact';
 import { ReactComponent as Hyper } from '../../img/iconmonstr-link-1.svg';
 import { useGlobalContext } from '../../context';
 
-const PCbg = styled(Cbg)`
-  background-color: ${({ theme }) => theme.colors.darkGray};
-  top: 0;
-`;
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
+
+// Import Swiper styles
+import 'swiper/swiper.min.css';
+import './products.css';
 
 const Pl = styled.div`
-  padding: 50px 100px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   text-align: center;
-  ${tablet({ padding: '10px' })}
+  ${tablet({ padding: '10px' })};
 `;
 
 const PlTexts = styled.div`
@@ -31,48 +33,47 @@ const Hyperlink = styled(Hyper)`
 const PlTitle = styled.h1`
   font-size: 50px;
   font-weight: 600;
-  a {
-    font-size: 50px;
-    font-weight: 600;
-    text-decoration: none;
-  }
+
   &:hover ${Hyperlink} {
     visibility: visible;
   }
 `;
 
-const PlDesc = styled.p`
-  margin: 20px 0px;
-  ${mobile({ display: 'none' })}
-`;
-const PlList = styled('div')`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: flex-start;
-  ${mobile({ justifyContent: 'center' })}
-  ${tablet({ justifyContent: 'center' })}
-`;
-
 const Products = () => {
   const { isDark } = useGlobalContext();
+
   return (
     <Pl id='work'>
-      <PCbg />
       <PlTexts>
-        <PlTitle>
-          <a href='#work' style={{ color: isDark ? '#f1f1f4' : '#111' }}>
-            <Hyperlink /> Content i created
-          </a>
-        </PlTitle>
-        <PlDesc>Here is some of my work.</PlDesc>
+        <a href='#work' style={{ color: isDark ? '#f1f1f4' : '#111' }}>
+          <PlTitle>
+            <Hyperlink /> Sites I've built
+          </PlTitle>
+        </a>
       </PlTexts>
-      <PlList>
+      <Swiper
+        autoplay={{
+          delay: 4500,
+          disableOnInteraction: true,
+        }}
+        modules={[Autoplay]}
+        breakpoints={{
+          360: { slidesPerView: 1 },
+          480: { slidesPerView: 1, spaceBetween: 18 },
+          768: { slidesPerView: 2, spaceBetween: 24 },
+          960: { slidesPerView: 2, spaceBetween: 32 },
+          1260: { slidesPerView: 3, spaceBetween: 42 },
+          1650: { slidesPerView: 4, spaceBetween: 52 },
+        }}
+        spaceBetween={52}
+        className='mySwiper'
+      >
         {products.map((item) => (
-          <Product img={item.img} key={item.id} link={item.link} />
+          <SwiperSlide className='mySwiperSlide' key={item.id}>
+            <Product img={item.img} link={item.link} />
+          </SwiperSlide>
         ))}
-      </PlList>
+      </Swiper>
     </Pl>
   );
 };

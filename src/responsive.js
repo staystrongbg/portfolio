@@ -23,3 +23,11 @@ export const tablet = (props) => {
     }
   `;
 };
+
+export const laoptop = (props) => {
+  return css`
+    @media (max-width: 1260px) {
+      ${props}
+    }
+  `;
+};

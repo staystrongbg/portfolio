@@ -1,29 +1,24 @@
-import styled from 'styled-components';
-import { Cbg } from '../contact/Contact';
+import styled from "styled-components";
+import { useGlobalContext } from "../../context";
 
 const F = styled.div`
   width: 100%;
   position: relative;
-  background-color: #000;
-  height: 30px;
-  text-align: center;
-  color: #f2f2f2;
-  p {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  background: ${({ theme, isDark }) =>
+    isDark ? theme.colors.bg : theme.colors.colorLight};
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${({ theme, isDark }) =>
+    isDark ? theme.colors.colorLight : theme.colors.bg};
 `;
-const FCbg = styled(Cbg)`
-  background-color: darkgray;
-  height: 30px;
-`;
+
 const Footer = () => {
+  const { isDark } = useGlobalContext();
   return (
-    <F>
-      <FCbg></FCbg>
-      <p>devox &copy; 2021 </p>
+    <F isDark={isDark}>
+      <p>devox &copy; 2022 </p>
     </F>
   );
 };
